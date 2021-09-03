@@ -1,10 +1,24 @@
 // Todo arquivo que representa uma classe, deve começar com letra maiúscula;
 
+import {
+    Cliente
+} from "./Cliente.js";
+
 export class ContaCorrente {
     agencia;
-    _saldo;
-
+    _cliente;
     _saldo = 0;
+
+    set cliente(novoValor) {
+        if (novoValor instanceof Cliente) {
+            this._cliente = novoValor;
+        }
+    }
+
+    get saldo() {
+        return this._saldo;
+    }
+
 
     sacar(valor) {
         if (this._saldo >= valor) {
