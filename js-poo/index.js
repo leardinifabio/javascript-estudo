@@ -14,3 +14,4 @@ const contaCorrente2 = new ContaCorrente(1370, cliente2);
 
 console.log(cliente1);
 console.log(cliente2);
+console.log('O ByteBank possui' + ' ' + ContaCorrente.numeroDeContas + ' ' + 'contas');
