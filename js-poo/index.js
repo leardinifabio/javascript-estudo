@@ -4,17 +4,31 @@ import {
 
 import {
     Conta
-} from "./Contas/Contas.js";
+} from "./Contas/Conta.js";
+
+import {
+    ContaCorrente
+} from "./Contas/ContaCorrente.js";
+
+import {
+    ContaPoupanca
+} from "./Contas/ContaPoupanca.js";
+
+
 
 const cliente1 = new Cliente("Ricardo", 13000177700); //instanciando objeto.
-const conta01 = new Conta(1370, cliente1);
+const conta01 = new ContaCorrente(1370, cliente1);
 
 const cliente2 = new Cliente("Alice", 13000066699);
-const conta02 = new Conta(1370, cliente2);
+const conta02 = new ContaPoupanca(1370, cliente2);
 
 conta01.depositar(5000);
-conta01.sacar(4950);
+conta02.depositar(5000);
+
+conta01.sacar(4000);
+conta02.sacar(4000);
 
 console.log(conta01);
 console.log(conta02);
-console.log('O ByteBank possui' + ' ' + Conta.numeroDeContas + ' ' + 'contas');
+console.log('O ByteBank possui' + ' ' + ContaCorrente.numeroDeContas + ' ' + 'Conta(s) Corrente(s)');
+console.log('O ByteBank possui' + ' ' + ContaPoupanca.numeroDeContas + ' ' + 'Conta(s) Corrente(s)');
