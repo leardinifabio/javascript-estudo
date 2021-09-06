@@ -3,16 +3,16 @@ import {
 } from "./Cliente.js";
 
 import {
-    Conta
-} from "./Contas/Conta.js";
-
-import {
     ContaCorrente
 } from "./Contas/ContaCorrente.js";
 
 import {
     ContaPoupanca
 } from "./Contas/ContaPoupanca.js";
+
+import {
+    ContaSalario
+} from "./Contas/ContaSalario.js";
 
 
 const cliente1 = new Cliente("Ricardo", 13000177700); //instanciando objeto.
@@ -34,3 +34,4 @@ console.log(conta02);
 
 console.log('O ByteBank possui' + ' ' + ContaCorrente.numeroDeContas + ' ' + 'Conta(s) Corrente(s)');
 console.log('O ByteBank possui' + ' ' + ContaPoupanca.numeroDeContas + ' ' + 'Conta(s) Corrente(s)');
+console.log('O ByteBank possui' + ' ' + ContaSalario.numeroDeContas + ' ' + 'Conta(s) Corrente(s)');
