@@ -3,7 +3,18 @@ export class Funcionario {
         this._nome = nome;
         this._salario = salario;
         this._cpf = cpf;
+
         this._bonificacao = 1.0;
+        this._senha;
+    }
+
+    /* Expondo a senha para o sistema de autenticação funcionar */
+    get senha() {
+        return this._senha;
+    }
+
+    cadastrarSenha(senha) {
+        this._senha = senha;
     }
 
 }
