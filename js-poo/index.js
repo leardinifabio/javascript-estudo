@@ -26,10 +26,10 @@ import {
 } from "./SistemaAutenticacao.js";
 
 
-const cliente1 = new Cliente("Ricardo", 13000177700); //instanciando objeto.
+const cliente1 = new Cliente("Ricardo", 13000177700, "0011"); //instanciando objeto.
 const conta01 = new ContaCorrente(1370, cliente1);
 
-const cliente2 = new Cliente("Alice", 13000066699);
+const cliente2 = new Cliente("Alice", 13000066699, "0011");
 const conta02 = new ContaPoupanca(1370, cliente2);
 
 //const contaTeste = new Conta(1370, cliente1); (teste de erro ao quando dev tenta instanciar um objeto Conta);
@@ -55,4 +55,6 @@ gerente.cadastrarSenha(654321);
 
 const diretorEstaLogado = SistemaAutenticacao.login(diretor, 123456);
 const gerenteEstaLogado = SistemaAutenticacao.login(gerente, 654321);
-console.log(diretorEstaLogado, gerenteEstaLogado);
+const cliente1EstaLogado = SistemaAutenticacao.login(cliente1, "0011");
+
+console.log(diretorEstaLogado, gerenteEstaLogado, cliente1EstaLogado);

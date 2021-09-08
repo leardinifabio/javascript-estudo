@@ -11,9 +11,4 @@ export class Cliente { //criando molde com propriedades do cliente.
         this._cpf = cpf;
         this._senha = senha;
     }
-
-    autenticar(senha) {
-        return senha = this._senha;
-    }
-
 }
