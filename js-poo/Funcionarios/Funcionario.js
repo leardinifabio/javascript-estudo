@@ -9,8 +9,12 @@ export class Funcionario {
     }
 
     /* Expondo a senha para o sistema de autenticação funcionar */
-    get senha() {
-        return this._senha;
+    /*     get senha() {
+            return this._senha;
+        } */
+
+    autenticar(senha) {
+        return senha = this._senha;
     }
 
     cadastrarSenha(senha) {
